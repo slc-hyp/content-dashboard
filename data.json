@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T02:30:21Z",
+  "generated_at": "2026-04-09T03:01:04Z",
   "opportunities": {
     "items": [
       {
@@ -17,7 +17,7 @@
       },
       {
         "id": 2,
-        "status": "new",
+        "status": "develop",
         "pillar": "Pillar 1",
         "title": "The real product skill is getting from \"something feels off\" to the underlying rows",
         "why_now": "Repeated in Drive assets and the 60-day roadmap. Teams need a repeatable path from a vague complaint to the underlying rows.",
