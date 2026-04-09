@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyperparam Content Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --yellow: #d29922; --red: #f85149;
+    --purple: #bc8cff; --orange: #f0883e; --pink: #f778ba;
+    --blue: #58a6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; padding: 20px; max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .subtitle { color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .card.full { grid-column: 1 / -1; }
+  .stat-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .stat { text-align: center; flex: 1; min-width: 100px; padding: 12px; background: var(--bg); border-radius: 6px; }
+  .stat .num { font-size: 24px; font-weight: 700; }
+  .stat .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat.x { border-left: 3px solid var(--accent); }
+  .stat.li { border-left: 3px solid var(--blue); }
+
+  /* Calendar */
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+  .cal-header { text-align: center; font-size: 11px; color: var(--muted); padding: 4px; font-weight: 600; }
+  .cal-day { background: var(--bg); border-radius: 4px; min-height: 60px; padding: 4px 6px; font-size: 11px; position: relative; }
+  .cal-day.empty { background: transparent; }
+  .cal-day.today { border: 1px solid var(--accent); }
+  .cal-day .day-num { font-weight: 600; color: var(--muted); }
+  .cal-day .event { font-size: 10px; margin-top: 2px; padding: 1px 4px; border-radius: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .cal-day .event.upcoming { background: rgba(88,166,255,0.2); color: var(--accent); }
+  .cal-day .event.posted { background: rgba(63,185,80,0.2); color: var(--green); }
+  .cal-nav { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .cal-nav button { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+  .cal-nav button:hover { border-color: var(--accent); }
+  .cal-nav .month-label { font-weight: 600; min-width: 140px; text-align: center; }
+
+  /* Opportunities */
+  .opp { padding: 10px 12px; border-left: 3px solid var(--border); margin-bottom: 8px; background: var(--bg); border-radius: 0 6px 6px 0; }
+  .opp.status-new { border-left-color: var(--accent); }
+  .opp.status-expand { border-left-color: var(--yellow); }
+  .opp.status-develop { border-left-color: var(--green); }
+  .opp.status-skip { border-left-color: var(--muted); opacity: 0.5; }
+  .opp.status-posted { border-left-color: var(--purple); }
+  .opp .opp-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .opp .opp-id { font-weight: 700; color: var(--muted); font-size: 12px; }
+  .opp .opp-title { font-weight: 600; flex: 1; }
+  .badge { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+  .badge.new { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .badge.expand { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .badge.develop { background: rgba(63,185,80,0.15); color: var(--green); }
+  .badge.skip { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .badge.posted { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .badge.pillar { background: rgba(240,136,62,0.1); color: var(--orange); }
+  .opp .opp-detail { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* Posted log */
+  .post-entry { padding: 8px 12px; background: var(--bg); border-radius: 6px; margin-bottom: 6px; }
+  .post-entry .post-meta { font-size: 11px; color: var(--muted); }
+  .post-entry .post-text { margin-top: 4px; }
+
+  /* Filter */
+  .filters { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
+  .filters button { background: var(--bg); border: 1px solid var(--border); color: var(--muted); padding: 3px 10px; border-radius: 12px; cursor: pointer; font-size: 11px; }
+  .filters button.active { border-color: var(--accent); color: var(--accent); }
+  .filters button:hover { border-color: var(--accent); }
+
+  .empty { color: var(--muted); font-style: italic; font-size: 12px; padding: 20px; text-align: center; }
+  .updated { text-align: right; font-size: 11px; color: var(--muted); margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<h1>📊 Hyperparam Content Dashboard</h1>
+<div class="subtitle">Kenny Daniel — Content pipeline, calendar, and analytics</div>
+
+<!-- Analytics -->
+<div class="grid">
+  <div class="card full">
+    <h2>Platform Analytics</h2>
+    <div class="stat-row" id="stats"></div>
+  </div>
+</div>
+
+<!-- Calendar -->
+<div class="grid">
+  <div class="card full">
+    <h2>Content Calendar</h2>
+    <div class="cal-nav">
+      <button onclick="calPrev()">◀</button>
+      <span class="month-label" id="calMonth"></span>
+      <button onclick="calNext()">▶</button>
+      <button onclick="calToday()">Today</button>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+  </div>
+</div>
+
+<!-- Opportunities + Posted -->
+<div class="grid">
+  <div class="card">
+    <h2>Opportunities Queue</h2>
+    <div class="filters" id="oppFilters"></div>
+    <div id="oppList"></div>
+  </div>
+  <div class="card">
+    <h2>Posted Log</h2>
+    <div id="postedList"></div>
+  </div>
+</div>
+
+<div class="updated" id="updatedAt"></div>
+
+<script>
+let DATA = null;
+let calYear, calMonth;
+let oppFilter = 'all';
+
+async function loadData() {
+  try {
+    const r = await fetch('data.json');
+    DATA = await r.json();
+    render();
+  } catch (e) {
+    document.body.innerHTML += '<div class="empty">Failed to load data.json — run: python3 scripts/build_dashboard.py</div>';
+  }
+}
+
+function render() {
+  renderStats();
+  renderCalendar();
+  renderOpportunities();
+  renderPosted();
+  const d = DATA.generated_at ? new Date(DATA.generated_at).toLocaleString() : '?';
+  document.getElementById('updatedAt').textContent = 'Data updated: ' + d;
+}
+
+function renderStats() {
+  const el = document.getElementById('stats');
+  const p = DATA.analytics.platforms;
+  const snap = DATA.analytics.snapshots;
+  const latest = snap[snap.length - 1] || {};
+  const baseline = snap[0] || {};
+
+  const items = [
+    { label: '@platypii', num: p.x_platypii?.followers || 0, cls: 'x', delta: null },
+    { label: '@hyperparamapp', num: p.x_hyperparamapp?.followers || 0, cls: 'x', delta: null },
+    { label: 'LinkedIn', num: p.linkedin_kenny?.connections || '—', cls: 'li', delta: null },
+    { label: 'Opportunities', num: DATA.opportunities.items.length, cls: '', delta: null },
+    { label: 'Posts', num: DATA.posted_log.length, cls: '', delta: null },
+  ];
+
+  // Calculate deltas if we have multiple snapshots
+  if (snap.length >= 2) {
+    const first = snap[0];
+    const last = snap[snap.length - 1];
+    items[0].delta = (last.x_platypii_followers || 0) - (first.x_platypii_followers || 0);
+    items[1].delta = (last.x_hyperparamapp_followers || 0) - (first.x_hyperparamapp_followers || 0);
+  }
+
+  el.innerHTML = items.map(s => {
+    const deltaStr = s.delta !== null && s.delta !== 0
+      ? `<div style="font-size:11px;color:${s.delta > 0 ? 'var(--green)' : 'var(--red)'}">${s.delta > 0 ? '+' : ''}${s.delta}</div>`
+      : '';
+    return `<div class="stat ${s.cls}"><div class="num">${typeof s.num === 'number' ? s.num.toLocaleString() : s.num}</div>${deltaStr}<div class="label">${s.label}</div></div>`;
+  }).join('');
+}
+
+function renderCalendar() {
+  const now = new Date();
+  if (!calYear) { calYear = now.getFullYear(); calMonth = now.getMonth(); }
+
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  document.getElementById('calMonth').textContent = `${months[calMonth]} ${calYear}`;
+
+  const firstDay = new Date(calYear, calMonth, 1).getDay();
+  const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+  const today = now.getDate();
+  const isCurrentMonth = calYear === now.getFullYear() && calMonth === now.getMonth();
+
+  // Build events map
+  const events = {};
+  (DATA.calendar.upcoming || []).forEach(e => {
+    if (!e.date) return;
+    const d = new Date(e.date);
+    const key = d.getDate();
+    if (d.getMonth() === calMonth && d.getFullYear() === calYear) {
+      events[key] = events[key] || [];
+      events[key].push({ ...e, type: 'upcoming' });
+    }
+  });
+  (DATA.calendar.posted || []).forEach(e => {
+    if (!e.date) return;
+    const d = new Date(e.date);
+    const key = d.getDate();
+    if (d.getMonth() === calMonth && d.getFullYear() === calYear) {
+      events[key] = events[key] || [];
+      events[key].push({ ...e, type: 'posted' });
+    }
+  });
+
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  let html = days.map(d => `<div class="cal-header">${d}</div>`).join('');
+
+  for (let i = 0; i < firstDay; i++) html += '<div class="cal-day empty"></div>';
+  for (let d = 1; d <= daysInMonth; d++) {
+    const isTodayCls = isCurrentMonth && d === today ? ' today' : '';
+    const evts = events[d] || [];
+    const evtHtml = evts.map(e => `<div class="event ${e.type}">${e.platform || ''}</div>`).join('');
+    html += `<div class="cal-day${isTodayCls}"><span class="day-num">${d}</span>${evtHtml}</div>`;
+  }
+
+  document.getElementById('calGrid').innerHTML = html;
+}
+
+function calPrev() { calMonth--; if (calMonth < 0) { calMonth = 11; calYear--; } renderCalendar(); }
+function calNext() { calMonth++; if (calMonth > 11) { calMonth = 0; calYear++; } renderCalendar(); }
+function calToday() { const n = new Date(); calYear = n.getFullYear(); calMonth = n.getMonth(); renderCalendar(); }
+
+function renderOpportunities() {
+  const items = DATA.opportunities.items;
+  const statuses = ['all', ...new Set(items.map(o => o.status))];
+
+  const filtersEl = document.getElementById('oppFilters');
+  filtersEl.innerHTML = statuses.map(s =>
+    `<button class="${oppFilter === s ? 'active' : ''}" onclick="setOppFilter('${s}')">${s}</button>`
+  ).join('');
+
+  const filtered = oppFilter === 'all' ? items : items.filter(o => o.status === oppFilter);
+
+  if (filtered.length === 0) {
+    document.getElementById('oppList').innerHTML = '<div class="empty">No opportunities</div>';
+    return;
+  }
+
+  document.getElementById('oppList').innerHTML = filtered.map(o => `
+    <div class="opp status-${o.status}">
+      <div class="opp-header">
+        <span class="opp-id">#${o.id}</span>
+        <span class="badge ${o.status}">${o.status}</span>
+        <span class="badge pillar">${o.pillar}</span>
+        <span class="opp-title">${o.title}</span>
+      </div>
+      ${o.why_now ? `<div class="opp-detail">${o.why_now}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function setOppFilter(f) { oppFilter = f; renderOpportunities(); }
+
+function renderPosted() {
+  const posts = DATA.posted_log;
+  if (!posts.length) {
+    document.getElementById('postedList').innerHTML = '<div class="empty">No posts yet</div>';
+    return;
+  }
+  document.getElementById('postedList').innerHTML = posts.map(p => `
+    <div class="post-entry">
+      <div class="post-meta">${p.date || ''} · ${p.platform || ''} ${p.url ? `· <a href="${p.url}" style="color:var(--accent)">${p.url}</a>` : ''}</div>
+      <div class="post-text">${p.text || p.title || ''}</div>
+    </div>
+  `).join('');
+}
+
+loadData();
+</script>
+</body>
+</html>

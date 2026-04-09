@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-04-09T02:09:55Z",
+  "opportunities": {
+    "items": [
+      {
+        "id": 1,
+        "status": "new",
+        "pillar": "Pillar 1",
+        "title": "Langfuse dataset reruns blending old and new scores into one review surface",
+        "why_now": "A fresh Langfuse issue shows dataset evaluations rerun under the same name can display the newest traces while run-level scores still aggregate older executions underneath. Review systems become misleading when visible examples and aggregate judgments are computed over different behavioral histories.",
+        "source": "https://github.com/langfuse/langfuse/issues/13022",
+        "format": "LinkedIn post, short thread, or builder reply",
+        "questions": [
+          "What is the best plain-English way to explain why rerun semantics matter more than another dashboard widget?",
+          "Is the sharper framing here about hidden regressions, review-loop trust, or dataset version boundaries?"
+        ]
+      },
+      {
+        "id": 2,
+        "status": "new",
+        "pillar": "Pillar 1",
+        "title": "The real product skill is getting from \"something feels off\" to the underlying rows",
+        "why_now": "Repeated in Drive assets and the 60-day roadmap. Teams need a repeatable path from a vague complaint to the underlying rows.",
+        "source": "Internal Drive assets + MLflow #22430",
+        "format": "LinkedIn post, short thread, or podcast talking point",
+        "questions": [
+          "What is the plainest way to describe the move from vague complaint to inspectable evidence without sounding like generic observability?",
+          "Do you want to anchor this in one concrete example or keep it at the workflow level?"
+        ]
+      },
+      {
+        "id": 3,
+        "status": "new",
+        "pillar": "Pillar 1",
+        "title": "Session review matters because many failures look like recovery until you inspect the whole conversation",
+        "why_now": "New asset PDF calls out identifying sessions where users stop making progress. HF dataset-viewer adding session_id support for Claude traces corroborates it.",
+        "source": "Internal Drive + https://github.com/huggingface/dataset-viewer/pull/3309",
+        "format": "LinkedIn post, short thread, or interview prompt",
+        "questions": [
+          "What are the best concrete signs that a session has stopped making progress even though the model is still producing text?",
+          "Is the sharper framing \"stuck sessions\" or \"false recovery\"?"
+        ]
+      },
+      {
+        "id": 4,
+        "status": "new",
+        "pillar": "Pillar 1",
+        "title": "Weekly review ownership is the real habit behind improving AI products over time",
+        "why_now": "Three internal docs all push the same idea: someone should review real production behavior weekly instead of waiting for a bug report.",
+        "source": "Internal Drive assets",
+        "format": "LinkedIn post or short X thread",
+        "questions": [
+          "Do you want this framed as a founder lesson, a team-process lesson, or a product-design lesson?",
+          "What should the minimal weekly review ritual actually include so the post feels concrete?"
+        ]
+      }
+    ],
+    "next_id": 5
+  },
+  "calendar": {
+    "upcoming": [],
+    "posted": []
+  },
+  "posted_log": [],
+  "analytics": {
+    "baseline_date": "2026-04-08",
+    "platforms": {
+      "x_platypii": {
+        "handle": "@platypii",
+        "type": "personal",
+        "followers": 1049,
+        "following": 2535,
+        "tweets": 1036,
+        "likes": 31333,
+        "listed": 30
+      },
+      "x_hyperparamapp": {
+        "handle": "@hyperparamapp",
+        "type": "company",
+        "followers": 65,
+        "following": 88,
+        "tweets": 126,
+        "likes": 80,
+        "listed": 1
+      },
+      "linkedin_kenny": {
+        "handle": "kennydaniel",
+        "url": "https://www.linkedin.com/in/kennydaniel/",
+        "type": "personal",
+        "connections": "500+",
+        "followers": null,
+        "notes": "LinkedIn shows 500+ connections; exact follower count not exposed via API (showFollowerCount: false)"
+      },
+      "linkedin_hyperparam": {
+        "handle": "hyperparam",
+        "url": "https://www.linkedin.com/company/hyperparam/",
+        "type": "company",
+        "staff_count": 6,
+        "followers": null,
+        "notes": "Company page exists; follower count not yet scraped"
+      }
+    },
+    "snapshots": [
+      {
+        "date": "2026-04-08",
+        "x_platypii_followers": 1049,
+        "x_hyperparamapp_followers": 65,
+        "linkedin_kenny_connections": "500+",
+        "linkedin_hyperparam_followers": null
+      }
+    ]
+  }
+}
