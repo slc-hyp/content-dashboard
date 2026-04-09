@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T02:09:55Z",
+  "generated_at": "2026-04-09T02:27:25Z",
   "opportunities": {
     "items": [
       {
@@ -7,9 +7,9 @@
         "status": "new",
         "pillar": "Pillar 1",
         "title": "Langfuse dataset reruns blending old and new scores into one review surface",
-        "why_now": "A fresh Langfuse issue shows dataset evaluations rerun under the same name can display the newest traces while run-level scores still aggregate older executions underneath. Review systems become misleading when visible examples and aggregate judgments are computed over different behavioral histories.",
+        "why_now": "A fresh Langfuse issue shows dataset evaluations rerun under the same name can display the newest traces while run-level scores still aggregate older executions underneath.",
         "source": "https://github.com/langfuse/langfuse/issues/13022",
-        "format": "LinkedIn post, short thread, or builder reply",
+        "format": "",
         "questions": [
           "What is the best plain-English way to explain why rerun semantics matter more than another dashboard widget?",
           "Is the sharper framing here about hidden regressions, review-loop trust, or dataset version boundaries?"
@@ -22,7 +22,7 @@
         "title": "The real product skill is getting from \"something feels off\" to the underlying rows",
         "why_now": "Repeated in Drive assets and the 60-day roadmap. Teams need a repeatable path from a vague complaint to the underlying rows.",
         "source": "Internal Drive assets + MLflow #22430",
-        "format": "LinkedIn post, short thread, or podcast talking point",
+        "format": "",
         "questions": [
           "What is the plainest way to describe the move from vague complaint to inspectable evidence without sounding like generic observability?",
           "Do you want to anchor this in one concrete example or keep it at the workflow level?"
@@ -35,7 +35,7 @@
         "title": "Session review matters because many failures look like recovery until you inspect the whole conversation",
         "why_now": "New asset PDF calls out identifying sessions where users stop making progress. HF dataset-viewer adding session_id support for Claude traces corroborates it.",
         "source": "Internal Drive + https://github.com/huggingface/dataset-viewer/pull/3309",
-        "format": "LinkedIn post, short thread, or interview prompt",
+        "format": "",
         "questions": [
           "What are the best concrete signs that a session has stopped making progress even though the model is still producing text?",
           "Is the sharper framing \"stuck sessions\" or \"false recovery\"?"
@@ -48,14 +48,261 @@
         "title": "Weekly review ownership is the real habit behind improving AI products over time",
         "why_now": "Three internal docs all push the same idea: someone should review real production behavior weekly instead of waiting for a bug report.",
         "source": "Internal Drive assets",
-        "format": "LinkedIn post or short X thread",
+        "format": "",
         "questions": [
           "Do you want this framed as a founder lesson, a team-process lesson, or a product-design lesson?",
           "What should the minimal weekly review ritual actually include so the post feels concrete?"
         ]
+      },
+      {
+        "id": 5,
+        "status": "new",
+        "pillar": "Pillar 1",
+        "title": "The 2026 wave of agentic AI failures and what they reveal about log inspection",
+        "why_now": "Level Up Coding documented 5 real agentic AI failures in 2026 including a code review agent that approved its own bugs. Stack Overflow published \"Are bugs inevitable with AI coding agents?\" Forbes: \"Why Most AI Agents Fail.\" Only 11% of orgs have agentic AI in production (Deloitte). Huge conversation right now.",
+        "source": "https://levelup.gitconnected.com/5-real-projects-where-agentic-ai-failed-badly-in-2026 | https://stackoverflow.blog/2026/01/28/are-bugs-and-incidents-inevitable-with-ai-coding-agents/",
+        "format": "",
+        "questions": [
+          "Have you seen agent failures where nobody inspected the reasoning chain?",
+          "What does it look like to actually open agent traces in Hyperparam \u2014 can you show a real example?"
+        ]
+      },
+      {
+        "id": 6,
+        "status": "new",
+        "pillar": "Pillar 2",
+        "title": "DuckDB-WASM can now query Iceberg REST Catalogs in a browser tab",
+        "why_now": "DuckDB shipped Iceberg-in-the-browser (Dec 2025), demoed at AWS re:Invent. InfoQ covered it Jan 2026. Biggest validation yet that browser-native data querying is real \u2014 but it's 3.2MB WASM vs hyparquet's pure-JS approach.",
+        "source": "https://duckdb.org/2025/12/16/iceberg-in-the-browser.html | https://news.ycombinator.com/item?id=45774571",
+        "format": "",
+        "questions": [
+          "Where does hyparquet's pure-JS approach beat DuckDB-WASM, and where does it not? Can you give honest numbers?",
+          "Is this a competition or a complement?"
+        ]
+      },
+      {
+        "id": 7,
+        "status": "new",
+        "pillar": "Pillar 2",
+        "title": "The entire HN archive (47M items) is now Parquet on Hugging Face \u2014 exploring it in the browser",
+        "why_now": "open-index published 47.3M HN items as Parquet on HuggingFace, updated every 5 minutes. Hit HN front page March 2026. Perfect demo for hyparquet.",
+        "source": "https://news.ycombinator.com/item?id=47378781",
+        "format": "",
+        "questions": [
+          "Would you be willing to record a screen walkthrough of opening this dataset in hyparquet? No backend, just HTTP range requests.",
+          "What's the most interesting thing you find scrolling through 47M HN items?"
+        ]
+      },
+      {
+        "id": 8,
+        "status": "new",
+        "pillar": "Pillar 2",
+        "title": "Hugging Face adopted hyparquet-writer in the Hub",
+        "why_now": "Kenny already tweeted about this. HF auto-converts all datasets under 5GB to Parquet. Adopting hyparquet-writer means the browser-native JS approach is being validated by the biggest ML data platform.",
+        "source": "Kenny's tweet (April 7) + https://huggingface.co/docs/dataset-viewer/parquet_process",
+        "format": "",
+        "questions": [
+          "What's the backstory \u2014 how did HF discover hyparquet-writer? Was it a cold PR, a conversation, organic?",
+          "What does this mean technically for HF's pipeline?"
+        ]
+      },
+      {
+        "id": 9,
+        "status": "new",
+        "pillar": "Pillar 3",
+        "title": "The Modern JavaScript Data Stack in 2026 \u2014 it exists now and nobody wrote the article",
+        "why_now": "Every \"2026 data science stack\" article is Python-only (Polars + DuckDB + Marimo). TypeScript overtook Python in developer surveys. But nobody has mapped the JS equivalent: hyparquet for Parquet, Arrow JS for memory, Squirreling for SQL, HighTable for display.",
+        "source": "https://htdocs.dev/posts/the-modern-python-data-stack-in-2026/ | Arrow JS standalone repo",
+        "format": "",
+        "questions": [
+          "Would you write \"The Modern JavaScript Data Stack\" as a blog post? You're literally building every piece of it.",
+          "How does the JS stack complement rather than replace the Python stack?"
+        ]
+      },
+      {
+        "id": 10,
+        "status": "new",
+        "pillar": "Pillar 3",
+        "title": "Apache Arrow JS moved to its own repo \u2014 what it means for the JS data ecosystem",
+        "why_now": "Arrow JS split from the monorepo into github.com/apache/arrow-js. Arrow turned 10 in Feb 2026. Signals the JS data ecosystem is maturing enough for standalone governance.",
+        "source": "https://github.com/apache/arrow/discussions/45943 | https://github.com/apache/arrow-js",
+        "format": "",
+        "questions": [
+          "How does Arrow JS relate to hyparquet? Different problems (memory layout vs file format)?",
+          "Does a standalone repo mean faster iteration for the JS ecosystem?"
+        ]
+      },
+      {
+        "id": 11,
+        "status": "new",
+        "pillar": "Pillar 3",
+        "title": "Building data apps in JavaScript without a backend \u2014 Parquet to charts, no server",
+        "why_now": "A Medium post describes streaming Parquet into DuckDB-WASM and rendering charts in the browser. Vercel AI SDK pushing JS-native data streaming. The no-backend data app is becoming a real pattern.",
+        "source": "https://medium.com/@hadiyolworld007/js-data-apps-2025-parquet-charts-no-backend-7a5dddcf245a",
+        "format": "",
+        "questions": [
+          "Can you show a purer version using hyparquet \u2014 smaller bundle, faster startup, streaming from byte one?",
+          "What's the bundle size comparison: hyparquet vs DuckDB-WASM for a simple \"open Parquet, render table\" app?"
+        ]
+      },
+      {
+        "id": 12,
+        "status": "new",
+        "pillar": "Pillar 4",
+        "title": "AFFiNE's open-sourced growth playbook \u2014 0 to 60K GitHub stars",
+        "why_now": "An ex-AFFiNE growth lead open-sourced their entire growth playbook (March 2026) detailing exactly how they went from 0 to 60K stars.",
+        "source": "https://gingiris.github.io/growth-tools/blog/2026/03/07/i-led-affine-from-0-to-60k-github-stars-here-are-my-open-source-growth-playbooks/",
+        "format": "",
+        "questions": [
+          "Which of these tactics would actually work for a 6-person team vs a VC-funded content machine?",
+          "Is \"GitHub stars != adoption\" a take you want to own publicly?"
+        ]
+      },
+      {
+        "id": 13,
+        "status": "new",
+        "pillar": "Pillar 4",
+        "title": "Open source GTM vs sales-led GTM for dev tools \u2014 what a 6-person team actually chooses",
+        "why_now": "Jesse Robbins (Heavybit) interview about dev tool startups emphasizes \"strong opinions, great taste, authentic community leadership.\" Kenny literally tweeted \"Who needs a CRM when you've got markdown + git?\"",
+        "source": "https://shiftmag.dev/how-to-build-dev-tool-startup-jesse-robbins-heavybit-5194/",
+        "format": "",
+        "questions": [
+          "Is your GTM intentionally developer-native (OSS adoption \u2192 product) or is it just how things evolved?",
+          "What do you agree/disagree with from Robbins?"
+        ]
+      },
+      {
+        "id": 14,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "The Cursor productivity study \u2014 39% more PRs, but is that the right metric?",
+        "why_now": "University of Chicago study found companies merge 39% more PRs after Cursor's agent. Cursor published it. LinkedIn/HN commentary is brutal: \"Number of PRs is a terrible metric.\" \"More PRs means more to review.\"",
+        "source": "https://cursor.com/blog/productivity | https://leaddev.com/ai/cursor-claims-its-tools-are-a-massive-productivity-hack-for-devs",
+        "format": "",
+        "questions": [
+          "You use AI coding tools daily \u2014 what metrics actually matter for a 6-person team?",
+          "Is 39% more PRs a good thing or a smell?"
+        ]
+      },
+      {
+        "id": 15,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "The vibe coding backlash is real \u2014 experienced devs are writing about where AI coding breaks",
+        "why_now": "Multiple HN front-page posts: \"Breaking the spell of vibe coding,\" \"Vibe Code Warning,\" \"Eight years of wanting, three months of building with AI.\" Experienced devs writing nuanced pieces about where AI creates hidden debt.",
+        "source": "https://news.ycombinator.com/item?id=47006615 | https://news.ycombinator.com/item?id=47648828",
+        "format": "",
+        "questions": [
+          "You build AI tools AND use AI to build them \u2014 where does vibe coding break for you?",
+          "Is there a recursive irony angle: \"I build AI and even I think vibe coding has limits\"?"
+        ]
+      },
+      {
+        "id": 16,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "Claude Code vs Copilot vs Cursor \u2014 a working developer's honest comparison",
+        "why_now": "AI coding landscape fragmenting fast. Claude Code launched as TUI and people love the simplicity. Reviews saying \"VS Code team could learn from Claude Code's natural workflow.\"",
+        "source": "https://bigmachine.io/articles/ai/initial-thoughts-claude-code-2025/ | https://scottw.com/2025-ai-developer-year/",
+        "format": "",
+        "questions": [
+          "What's your actual daily loop? Which tool for which task?",
+          "Would you share your real setup as a CEO+engineer at a 6-person company?"
+        ]
+      },
+      {
+        "id": 17,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "YC S25 is 60% AI companies \u2014 what saturation means for dev tools founders",
+        "why_now": "YC S25 had 160+ companies, ~60% AI-related. 25% of W25 startups had codebases 95% AI-generated. The AI startup gold rush is peaking.",
+        "source": "https://www.tldl.io/blog/yc-ai-startups-2026 | https://catalaize.substack.com/p/y-combinator-s25-batch-profile-and",
+        "format": "",
+        "questions": [
+          "You chose NOT to go through YC \u2014 do you see that as an advantage now?",
+          "When every startup claims to be AI, what actually differentiates?"
+        ]
+      },
+      {
+        "id": 18,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "\"I replaced our CRM with a git repo and an AI agent\" \u2014 Diego's viral post mirrors Kenny's tweet",
+        "why_now": "Diego Oppenheimer's LinkedIn post (110 likes, 29 comments) about replacing CRM with git+AI. Directly mirrors Kenny's \"Who needs a CRM when you've got markdown + git?\" tweet.",
+        "source": "https://www.linkedin.com/pulse/i-replaced-our-crm-git-repo-ai-agent-diego-oppenheimer-gtrmf",
+        "format": "",
+        "questions": [
+          "You and Diego are saying the same thing independently. Can you go deeper \u2014 what does your markdown+git CRM actually look like?",
+          "Where does it break? What would make you go back to a real CRM?"
+        ]
+      },
+      {
+        "id": 19,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "Fear is the startup killer \u2014 and Kenny jumps out of planes",
+        "why_now": "Jack Bridger (Scaling DevTools podcast) interview at RedMonk about founder fear and differentiation. \"Most dev tools startups fail not from bad products but from fear of standing out.\"",
+        "source": "https://redmonk.com/blog/2025/11/13/rmc-jack-bridger/",
+        "format": "",
+        "questions": [
+          "Is there a real connection between base jumping and shipping opinionated products?",
+          "What's the scariest business decision you've made, and how does it compare to a jump?"
+        ]
+      },
+      {
+        "id": 20,
+        "status": "new",
+        "pillar": "Pillar 7",
+        "title": "Skydive Sim launched on Meta Quest \u2014 a real skydiver reviews VR skydiving",
+        "why_now": "VR skydiving simulator with Google Earth integration launched on Meta Quest. Worldwide multiplayer, real satellite imagery. Direct intersection of Kenny's VR and skydiving interests.",
+        "source": "https://www.meta.com/experiences/skydive-sim-skydiving-simulator/3711951435596517/",
+        "format": "",
+        "questions": [
+          "Have you tried it? What does VR get right about freefall and what can't it replicate?",
+          "This is fun content \u2014 would you record yourself playing it?"
+        ]
+      },
+      {
+        "id": 21,
+        "status": "new",
+        "pillar": "Pillar 7",
+        "title": "Meta Quest 4 leaks \u2014 ditching controllers, $800, hand-tracking first",
+        "why_now": "Multiple leaks reveal Quest 4: hand-tracking by default, eye+face tracking standard, ~$800, thinner/lighter. Biggest VR hardware shift since Quest 2 made VR affordable.",
+        "source": "https://virtual.reality.news/news/meta-quest-4-may-ditch-controllers-for-800-in-2026/ | https://vrdb.app/blog/everything-we-know-about-meta-quest-4",
+        "format": "",
+        "questions": [
+          "As a VR user and Carmack follower: is hand-tracking-first the right call?",
+          "$800 vs Vision Pro \u2014 where does Quest 4 land for you?"
+        ]
+      },
+      {
+        "id": 22,
+        "status": "new",
+        "pillar": "Pillar 7",
+        "title": "RHDV2 rabbit disease spreading across the US \u2014 what rabbit owners need to know",
+        "why_now": "Rabbit Hemorrhagic Disease (RHDV2) is spreading with urgent vaccination campaigns. Australia released new strain for wild rabbit control making pet vaccination critical. LA clinic just vaccinated 93 rabbits in one session.",
+        "source": "https://www.cdfa.ca.gov/AHFSS/Animal_Health/RHD.html",
+        "format": "",
+        "questions": [
+          "Are your rabbits vaccinated? This is genuinely useful for the rabbit community.",
+          "Would you post about this? It's personal, helpful, and humanizing."
+        ]
+      },
+      {
+        "id": 23,
+        "status": "new",
+        "pillar": "Pillar 7",
+        "title": "Baltic Wingsuit Meet 2026 and the wingsuiting boom",
+        "why_now": "6th Baltic Wingsuit Meet announced featuring AWF world record organizers, XRW, beach landings. UK wingsuiting \"really taking off\" with multiple new events.",
+        "source": "https://www.wspoint.pl/wingsuit-flying-camps-and-boogies/baltic-wingsuit-meet-2026/",
+        "format": "",
+        "questions": [
+          "Are you going to any wingsuit events this year?",
+          "Would you share a jump video or experience? Even an old one \u2014 personal content crushes on X."
+        ]
       }
     ],
-    "next_id": 5
+    "next_id": 24
   },
   "calendar": {
     "upcoming": [],
