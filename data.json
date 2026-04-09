@@ -1,7 +1,20 @@
 {
-  "generated_at": "2026-04-09T06:30:38Z",
+  "generated_at": "2026-04-09T07:05:26Z",
   "opportunities": {
     "items": [
+      {
+        "id": 24,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "Multi-agent coding is creating a second wave of tools just to watch, route, and control the agents",
+        "why_now": "In the last 48 hours HN surfaced a small cluster of agent-workflow tools: `Agents Observe` hit 76 points with users saying blocking hooks kill throughput and that they need a clear visual timeline for sub-agents; `Skrun` reached 51 points by turning agent skills into callable APIs; `TUI-use` hit 42 points by letting agents drive interactive terminal programs; a fresh Go multi-agent harness open-sourced its own dashboard/chat/kanban stack. The pattern is broader than one repo: once people run multiple coding agents, the new bottleneck becomes visibility, control surfaces, and workflow boundaries.",
+        "source": "https://news.ycombinator.com/item?id=47602986 | https://news.ycombinator.com/item?id=47689319 | https://news.ycombinator.com/item?id=47692661 | https://news.ycombinator.com/item?id=47697020 | https://seattle.aitinkerers.org/p/ai-dev-tool-track-seattle-meetup-april-13th-2026",
+        "format": "",
+        "questions": [
+          "Is the interesting founder take here that multi-agent coding immediately recreates the same review/control problem we already see in production AI products?",
+          "Which layer matters most in practice: watching what agents are doing, constraining how they interact with tools, or turning their work into something inspectable after the fact?"
+        ]
+      },
       {
         "id": 1,
         "status": "new",
@@ -302,7 +315,7 @@
         ]
       }
     ],
-    "next_id": 24
+    "next_id": 25
   },
   "calendar": {
     "upcoming": [],
