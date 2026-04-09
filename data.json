@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T14:30:40Z",
+  "generated_at": "2026-04-09T15:01:10Z",
   "opportunities": {
     "items": [
       {
@@ -290,7 +290,7 @@
       },
       {
         "id": 22,
-        "status": "new",
+        "status": "skip",
         "pillar": "Pillar 7",
         "title": "RHDV2 rabbit disease spreading across the US \u2014 what rabbit owners need to know",
         "why_now": "Rabbit Hemorrhagic Disease (RHDV2) is spreading with urgent vaccination campaigns. Australia released new strain for wild rabbit control making pet vaccination critical. LA clinic just vaccinated 93 rabbits in one session.",
