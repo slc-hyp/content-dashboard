@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-10T13:31:01Z",
+  "generated_at": "2026-04-10T14:06:27Z",
   "opportunities": {
     "items": [
+      {
+        "id": 25,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "AI coding workflows are shifting from code review toward spec, eval, and checkpoint review",
+        "why_now": "The strongest fresh multi-source pattern this cycle was not another model/tool comparison but a workflow shift. Anthropic's 2026 Agentic Coding Trends Report says human oversight is scaling through intelligent collaboration rather than direct line-by-line authorship. OpenAI's long-horizon Codex guidance pushes `AGENTS.md`, `plans.md`, milestone checks, and command/test evidence as the control surface for longer runs. The StrongDM \"software factory\" discussion is the sharpest edge of the pattern: agents write the code, run the harnesses, and humans increasingly judge scenario coverage and outcome quality instead of reading every diff. The bigger product lesson is that once agents can run for a while, the bottleneck stops being code generation and becomes whether the team has good specs, hidden evals, checkpoints, and a review surface that makes those artifacts legible.",
+        "source": "https://resources.anthropic.com/2026-agentic-coding-trends-report | https://developers.openai.com/blog/run-long-horizon-tasks-with-codex | https://law.stanford.edu/2026/02/08/built-by-agents-tested-by-agents-trusted-by-whom/ | https://simonwillison.net/2026/Feb/7/software-factory/",
+        "format": "",
+        "questions": [
+          "In your own workflow, where do you still read the diff carefully, and where have specs / checks / artifact review already replaced traditional code review?",
+          "If you had to name the minimal control artifacts for an AI-heavy team, what are they: AGENTS.md, plans, scenario tests, hidden evals, checkpoints, something else?",
+          "Is the sharper public framing here about how development changes, or about how review becomes the real scarce product skill?"
+        ]
+      },
       {
         "id": 24,
         "status": "new",
@@ -315,7 +329,7 @@
         ]
       }
     ],
-    "next_id": 25
+    "next_id": 26
   },
   "calendar": {
     "upcoming": [],
