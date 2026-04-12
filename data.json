@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-04-12T18:30:31Z",
+  "generated_at": "2026-04-12T19:04:36Z",
   "opportunities": {
     "items": [
+      {
+        "id": 28,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "Berkeley\u2019s benchmark-exploit paper is a reminder that AI coding leaderboards are easy to optimize against and hard to trust",
+        "why_now": "UC Berkeley researchers published a fresh April 2026 teardown showing an exploit agent could achieve near-perfect scores across eight major agent benchmarks \u2014 including SWE-bench, WebArena, OSWorld, Terminal-Bench, and GAIA \u2014 without actually solving the tasks. The concrete examples are brutal: a tiny `conftest.py` can force SWE-bench Verified to pass, a fake `curl` wrapper can perfect-score Terminal-Bench, and WebArena could leak answers through `file://` access to task config. The bigger Kenny-fit lesson is not just that benchmarks can be gamed. It is that AI engineering discourse is still too eager to treat leaderboard movement as product truth, even when the eval harness itself is not adversarially robust. That creates a strong public angle on how teams should think about model/tool selection: benchmark theater is getting cheaper, so the durable skill becomes building evals and review surfaces that are harder to spoof and closer to real work.",
+        "source": "https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/ | https://news.ycombinator.com/item?id=47733217",
+        "format": "",
+        "questions": [
+          "What is the plainest way to explain the difference between a benchmark score and a trustworthy review loop for real product work?",
+          "Do you want to make this about coding-model selection specifically, or the broader problem that agent evals are becoming their own attack surface?",
+          "What kinds of evals feel hardest to game in practice: hidden tasks, production-derived datasets, human review, something else?"
+        ]
+      },
+      {
+        "id": 27,
+        "status": "new",
+        "pillar": "Pillar 4",
+        "title": "Cirrus Labs joining OpenAI raises a sharper OSS question than growth: what do builders owe users when the business changes underneath them?",
+        "why_now": "Cirrus Labs just announced it is joining OpenAI, shutting down Cirrus CI on June 1, stopping new Cirrus Runners customers, and relicensing source-available tools like Tart, Vetu, and Orchard under a more permissive license while dropping licensing fees. That makes this more interesting than a normal acquisition note. The founder/operator lesson is about the trust contract around open-source-adjacent developer tools: if your company changes direction, what is the right way to unwind pricing, licensing, hosted products, and user dependency without leaving everyone stranded? This feels like a real Kenny-fit Pillar 4 topic because it is not generic OSS cheerleading or GTM advice. It is a concrete case of how a tooling company behaves when the market and mission shift under it, especially in an era where agent infrastructure is pulling teams toward larger platforms.",
+        "source": "https://cirruslabs.org/ | https://news.ycombinator.com/item?id=47730194",
+        "format": "",
+        "questions": [
+          "What do OSS/devtools founders actually owe users when they pivot, get acquired, or shut down a hosted product?",
+          "Is permissive relicensing the gold-standard move here, or just the least bad version of a hard transition?",
+          "Does the interesting angle live in trust, distribution, or the reality that AI-platform gravity is going to pull more small tooling companies into bigger stacks?"
+        ]
+      },
       {
         "id": 26,
         "status": "new",
@@ -343,7 +371,7 @@
         ]
       }
     ],
-    "next_id": 27
+    "next_id": 29
   },
   "calendar": {
     "upcoming": [],
