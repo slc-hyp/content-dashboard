@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-12T00:30:23Z",
+  "generated_at": "2026-04-12T01:04:47Z",
   "opportunities": {
     "items": [
+      {
+        "id": 26,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "Chris Pirillo\u2019s vibe-coded anti-job-search apps show mini-products becoming the new proof of work",
+        "why_now": "GeekWire just covered Chris Pirillo\u2019s latest Seattle-adjacent mini-products on Apr 10: a Resume Analyzer and a pre-rejection-letter generator, each built in under an hour and aimed directly at the demoralizing theater of tech hiring. The sharper founder lesson is not just that AI makes it easier to ship jokes. It is that builders can now turn frustration into public product demos faster than they can tailor another resume. Pirillo has shipped 300+ of these mini-products and is implicitly arguing that in a market full of ghosting and saturated applications, tiny shipped artifacts are starting to function as reputation, distribution, and proof of work. That feels like a real Kenny-fit founder/builder angle because it ladders up to a broader question: when AI compresses product-building time, does \u201cshow me what you shipped\u201d start replacing \u201csend me your resume\u201d for a meaningful slice of technical opportunity?",
+        "source": "https://www.geekwire.com/2026/cry-til-you-laugh-chris-pirillo-vibe-codes-his-job-search-frustrations-into-brutally-honest-apps/",
+        "format": "",
+        "questions": [
+          "Do you buy the idea that tiny shipped products are becoming more valuable than a polished resume for technical people?",
+          "Is the interesting take here about distribution, proof of work, or the way AI collapses the cost of turning a feeling into a product?",
+          "What separates a gimmicky vibe-coded mini-app from a real signal of taste and capability?"
+        ]
+      },
       {
         "id": 25,
         "status": "new",
@@ -329,7 +343,7 @@
         ]
       }
     ],
-    "next_id": 26
+    "next_id": 27
   },
   "calendar": {
     "upcoming": [],
