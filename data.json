@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-04-13T13:30:56Z",
+  "generated_at": "2026-04-13T14:06:28Z",
   "opportunities": {
     "items": [
+      {
+        "id": 31,
+        "status": "new",
+        "pillar": "Pillar 3",
+        "title": "Flechette\u2019s momentum and Arrow JS friction point to a real split in the JavaScript data stack",
+        "why_now": "This week produced a cleaner JS-data-stack story than another maintenance note. `uwdata/flechette` shipped `v2.4.0` on Apr 10 while continuing to position itself as a faster, lighter, zero-dependency alternative to Arrow JS. At the same time, fresh `apache/arrow-js` issues from a DuckDB-WASM frontend consumer exposed product-level gaps that matter in real browser data apps: no extension-type registry, which forces every consumer to hand-decode DuckDB Arrow extensions, and silent `Date32` precision loss for wide date ranges. The Kenny-fit angle is not \u201clibrary drama.\u201d It is that the JavaScript data stack is now mature enough for a real implementation split: the reference library is no longer automatically the best fit once bundle size, frontend correctness, and browser-consumer ergonomics start to dominate.",
+        "source": "https://github.com/uwdata/flechette/releases/tag/v2.4.0 | https://github.com/uwdata/flechette | https://github.com/apache/arrow-js/issues/423 | https://github.com/apache/arrow-js/issues/422",
+        "format": "",
+        "questions": [
+          "Do you think the JS data ecosystem is entering the phase where \u201creference implementation\u201d and \u201cbest production library\u201d naturally diverge?",
+          "Where do browser-native consumers feel Arrow JS pain first in practice: extension types, bundle size, extraction speed, type correctness, or something else?",
+          "Is the sharper public framing here about Arrow specifically, or about the broader fact that JavaScript data tooling is developing its own priorities instead of inheriting backend assumptions?"
+        ]
+      },
+      {
+        "id": 32,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "Golden Analytics is a clean founder case for rebuilding BI around AI-native workflows instead of bolting AI onto the old stack",
+        "why_now": "Golden Analytics launched from Seattle on Apr 7 with $7M in seed funding and a founder who has seen two prior BI platform shifts from the inside. Fran\u00e7ois Ajenstat\u2019s framing is unusually crisp: Tableau, Power BI, and Looker are strong products, but they are \u201cbolting on AI\u201d instead of being built around it from the start. The demo details make this more than generic launch copy: a web-based BI product with a \u201cslider of autonomy,\u201d orchestration across multiple specialist models, and a deliberate rejection of the chatbot-as-analyst replacement framing. It also intersects cleanly with Kenny\u2019s world because Golden says it was built heavily with AI coding tools and is treating AI as the new workflow/control surface, not as one more feature checkbox. The founder lesson is that category resets are real when the core interaction model changes, and incumbents often carry too much product and architecture debt to make that turn cleanly.",
+        "source": "https://www.geekwire.com/2026/former-tableau-product-chief-launches-golden-analytics-using-ai-to-challenge-the-bi-old-guard/ | https://www.prnewswire.com/news-releases/golden-analytics-debuts-with-7m-seed-funding-from-nea-and-madrona-to-build-ai-native-business-intelligence-302735519.html",
+        "format": "",
+        "questions": [
+          "What kinds of product categories actually deserve an AI-native rebuild, versus a disciplined AI add-on to an existing workflow?",
+          "When does \u201cAI-native\u201d describe a genuine control-surface shift rather than just better launch copy?",
+          "Do you buy the founder claim that incumbents are structurally bad at this kind of reset, or is the harder truth that most startups still underestimate how much trust and workflow design the old tools already earned?"
+        ]
+      },
       {
         "id": 29,
         "status": "new",
@@ -399,7 +427,7 @@
         ]
       }
     ],
-    "next_id": 31
+    "next_id": 33
   },
   "calendar": {
     "upcoming": [],
