@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-13T00:31:10Z",
+  "generated_at": "2026-04-13T01:04:11Z",
   "opportunities": {
     "items": [
+      {
+        "id": 29,
+        "status": "new",
+        "pillar": "Pillar 2",
+        "title": "Squirreling\u2019s latest optimizer burst makes browser-native SQL look less like a demo and more like a real analytical engine",
+        "why_now": "`squirreling` had a concentrated Apr 12 push that is more meaningful than routine maintenance: correlated subqueries landed, a TopN node was added to cut `ORDER BY ... LIMIT` memory usage, and projection pushdown through `UNION ALL` was added specifically to avoid out-of-memory failures on wide rows and large JSON/message columns across shards. The Kenny-fit angle is not \u201clook, another release.\u201d It is that browser-native SQL engines are starting to pick up the kinds of optimizer and memory-behavior work that make people trust them for real exploratory analysis instead of toy demos. That creates a cleaner Pillar 2/3 story about what has to become true for pure-JS browser data tooling to feel production-grade: not just parsing files, but surviving realistic query shapes and ugly wide data under browser constraints.",
+        "source": "https://github.com/hyparam/squirreling/issues/25 | https://github.com/hyparam/squirreling/issues/24 | https://github.com/hyparam/squirreling/issues/21 | https://github.com/hyparam/squirreling/commit/d6f7ba1",
+        "format": "",
+        "questions": [
+          "What are the specific query patterns or memory pathologies that separate a browser SQL demo from an engine you actually trust on messy data?",
+          "Is the sharper framing here about browser-native maturity, or about the fact that database-history problems are now replaying inside the browser under tighter startup and memory limits?",
+          "Where do you think pure-JS query engines still hit real walls compared with DuckDB-WASM or server-side systems?"
+        ]
+      },
       {
         "id": 28,
         "status": "new",
@@ -371,7 +385,7 @@
         ]
       }
     ],
-    "next_id": 29
+    "next_id": 30
   },
   "calendar": {
     "upcoming": [],
