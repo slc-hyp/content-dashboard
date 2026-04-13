@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T12:30:13Z",
+  "generated_at": "2026-04-13T13:04:16Z",
   "opportunities": {
     "items": [
       {
@@ -14,6 +14,20 @@
           "What are the specific query patterns or memory pathologies that separate a browser SQL demo from an engine you actually trust on messy data?",
           "Is the sharper framing here about browser-native maturity, or about the fact that database-history problems are now replaying inside the browser under tighter startup and memory limits?",
           "Where do you think pure-JS query engines still hit real walls compared with DuckDB-WASM or server-side systems?"
+        ]
+      },
+      {
+        "id": 30,
+        "status": "new",
+        "pillar": "Pillar 4",
+        "title": "Marketingskills turning Claude Code know-how into an installable GTM layer for AI agents",
+        "why_now": "`coreyhaines31/marketingskills` is showing up on GitHub Trending for JavaScript right now, and the repo is not just another prompt pack. It packages CRO, copywriting, SEO, analytics, and growth-engineering workflows as reusable skills for Claude Code and other coding agents, with explicit support for Claude Code, Codex, Cursor, Windsurf, and the broader Agent Skills spec. The Kenny-fit angle is that this makes GTM itself look more like productized open-source infrastructure: not a blog post about marketing, but a workflow layer teams can drop into their agent stack and iterate on in public. That creates a sharper Pillar 4/5 story about how AI changes distribution: the thing you open-source is no longer just the library or app, but the business playbook that teaches agents how to do the work.",
+        "source": "https://github.com/trending/javascript | https://github.com/coreyhaines31/marketingskills",
+        "format": "",
+        "questions": [
+          "Do you think agent-era open source starts pulling GTM knowledge into the repo the same way dev workflow knowledge moved into `AGENTS.md` and skills?",
+          "What separates a real installable workflow advantage from a dressed-up prompt bundle?",
+          "If every team can clone the same agent skills, where does actual differentiation move: data, taste, distribution, or something else?"
         ]
       },
       {
@@ -385,7 +399,7 @@
         ]
       }
     ],
-    "next_id": 30
+    "next_id": 31
   },
   "calendar": {
     "upcoming": [],
