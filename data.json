@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-04-14T06:31:14Z",
+  "generated_at": "2026-04-14T07:06:21Z",
   "opportunities": {
     "items": [
+      {
+        "id": 33,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "GitButler\u2019s $17M round sharpens a bigger founder question: what comes after Git when agents are part of the workflow",
+        "why_now": "GitButler announced a $17M Series A in the last 48 hours with an unusually specific thesis from Scott Chacon: the hard problem is no longer generating code changes, but organizing, reviewing, and integrating change when context is spread across humans, tools, and now agents. That makes this stronger than ordinary funding news. The Kenny-fit angle is the product/business lesson underneath it: sometimes a legacy developer primitive does not get replaced outright, but becomes the substrate for a new control surface because the workflow around it has changed faster than the primitive itself. This is a cleaner founder story than generic \u201cAI is changing coding\u201d discourse because it ties market timing, interface redesign, and collaboration pain together in one concrete case.",
+        "source": "https://blog.gitbutler.com/series-a/ | https://news.ycombinator.com/item?id=47714967",
+        "format": "",
+        "questions": [
+          "Do you buy the claim that the next devtools winners will redesign collaboration around Git rather than trying to replace Git itself?",
+          "What actually changes first in an agent-heavy workflow: branching, review, merge timing, or the metadata/context layer around code changes?",
+          "Is the more interesting founder lesson here about product timing, or about recognizing when an old abstraction has become the bottleneck?"
+        ]
+      },
+      {
+        "id": 34,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "Claude Code invisible-token complaints are turning AI coding tools into infrastructure you have to audit, not just use",
+        "why_now": "In the last 24 hours a fresh HN discussion and accompanying proxy-based writeup pushed a more specific AI-coding complaint than the existing queue: developers think Claude Code may be injecting large amounts of invisible context that users cannot see in `/context` or audit directly, while burning through plan limits faster than expected. Even if Anthropic ends up classifying the behavior as a bug, the broader Kenny-fit lesson is durable: once an AI coding tool can silently add hidden context, cost burn and output quality become infrastructure-audit problems rather than simple UX issues. That is a stronger first-person builder angle than another generic vibe-coding critique because it is about hidden runtime state, not just bad code generation.",
+        "source": "https://efficienist.com/claude-code-may-be-burning-your-limits-with-invisible-tokens-you-cant-see-or-audit/ | https://news.ycombinator.com/item?id=47754179",
+        "format": "",
+        "questions": [
+          "What is the plainest way to explain why hidden context is a product trust problem, not just a billing annoyance?",
+          "Have AI coding tools crossed the line where developers need observability for the tool itself, not just for the code it emits?",
+          "If you were designing the ideal control surface here, what would be inspectable by default: injected prompts, cache use, token budget, or all of it?"
+        ]
+      },
       {
         "id": 31,
         "status": "new",
@@ -427,7 +455,7 @@
         ]
       }
     ],
-    "next_id": 33
+    "next_id": 35
   },
   "calendar": {
     "upcoming": [],
