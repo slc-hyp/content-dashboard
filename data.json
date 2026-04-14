@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-14T12:31:01Z",
+  "generated_at": "2026-04-14T13:06:12Z",
   "opportunities": {
     "items": [
+      {
+        "id": 35,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "Vercel\u2019s agent-fueled growth sharpens a founder question: who captures value when AI makes software creation cheap",
+        "why_now": "TechCrunch reported on Apr 13 that Vercel\u2019s run rate reached $340M by the end of February, up from roughly $100M at the start of 2024, with Guillermo Rauch explicitly tying the surge to AI-made apps and saying 30% of apps on the platform already come from agents. The sharper Kenny-fit angle is not \u201cVercel is doing well.\u201d It is that once agents and non-developers can ship far more software, the most valuable companies may be the ones that become the default deployment and operating layer for that new output. This is a cleaner founder story than generic AI-startup growth chatter because it is about where value accrues when creation gets radically cheaper: not necessarily in the model, and not even always in the app, but in the infrastructure and control surfaces that absorb the flood.",
+        "source": "https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/",
+        "format": "",
+        "questions": [
+          "If AI makes software creation abundant, where do you think the real bottlenecks \u2014 and therefore the best businesses \u2014 move: deployment, review, data, distribution, or something else?",
+          "Do you buy the idea that the next big infrastructure winners are the platforms that become the default home for agent-made software, not just human-made software?",
+          "What separates a company that benefits from AI output growth from one that gets commoditized by it?"
+        ]
+      },
       {
         "id": 33,
         "status": "new",
@@ -455,7 +469,7 @@
         ]
       }
     ],
-    "next_id": 35
+    "next_id": 36
   },
   "calendar": {
     "upcoming": [],
