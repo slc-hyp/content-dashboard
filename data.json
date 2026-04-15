@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T14:31:01Z",
+  "generated_at": "2026-04-15T15:04:58Z",
   "opportunities": {
     "items": [
       {
@@ -14,6 +14,34 @@
           "Do you buy the framing that the next trust layer for AI products is not another dashboard but a durable evidence trail teams can actually inspect after something goes wrong?",
           "Where do you draw the line between useful inspection data and compliance theater when people start talking about tamper-proof records, attestations, and proof?",
           "Is the sharper public angle here a founder lesson from shutting down Yara, or the broader product lesson that once AI is in production, claims about safety and quality are only as real as the review surface behind them?"
+        ]
+      },
+      {
+        "id": 37,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "GitHub turning Copilot code review into a measured workflow sharpens a broader point: review is becoming an AI operating surface, not just a helper feature",
+        "why_now": "GitHub\u2019s Apr 6 changelog added separate enterprise metrics for active versus passive Copilot code review users. That is a small product update with a bigger Kenny-fit lesson underneath it: AI code review is no longer being treated as a novelty add-on, but as a workflow companies expect to manage, measure, and optimize. The sharper angle is not \u201cGitHub added analytics.\u201d It is that once AI starts participating in review, teams need visibility into how review is actually happening, where human judgment still enters, and whether the system is changing the shape of engineering work or just adding more noise. This gives Kenny a cleaner way to talk about review as the new control surface in AI-heavy development without rehashing generic vibe-coding discourse.",
+        "source": "GitHub Changelog",
+        "format": "",
+        "questions": [
+          "Does this make you think AI code review is becoming a real operating layer, not just an assistive feature teams casually turn on?",
+          "What would you actually want to measure in an AI-heavy review loop: acceptance rate, false positives, time-to-merge, human override patterns, or something else?",
+          "If review is the new bottleneck, what does a good review surface look like when both humans and agents are participating?"
+        ]
+      },
+      {
+        "id": 38,
+        "status": "new",
+        "pillar": "Pillar 1",
+        "title": "Arize collapsing traces, evals, and tasks into one workflow suggests AI quality tooling is moving from scoreboards toward diagnosis and remediation",
+        "why_now": "Arize\u2019s early-April release notes bundled several changes that are more meaningful together than separately: trace aggregations over child spans, direct task creation from traces and spans, Eval Trace links in feedback flows, evaluator versioning in the playground, and code evals becoming first-class objects. The stronger Kenny-fit angle is not another eval-tools update. It is that AI quality systems are starting to compress the loop from bad behavior \u2192 inspect the trace \u2192 create a task \u2192 iterate on the fix. That is a better public story than generic \u201cobservability\u201d because it is about turning runtime evidence into a real improvement workflow rather than accumulating scores in a dashboard.",
+        "source": "Arize release notes",
+        "format": "",
+        "questions": [
+          "Do you think the real maturity marker for AI quality tools is when traces, evals, and follow-up tasks stop living in separate systems?",
+          "What is still missing from this loop before it actually helps a team improve a product over time instead of just generating more artifacts?",
+          "Is the better framing here \u201cdiagnosis workflow\u201d or \u201cshorter path from failure to fix\u201d?"
         ]
       },
       {
@@ -483,7 +511,7 @@
         ]
       }
     ],
-    "next_id": 37
+    "next_id": 39
   },
   "calendar": {
     "upcoming": [],
