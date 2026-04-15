@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-15T13:30:36Z",
+  "generated_at": "2026-04-15T14:03:09Z",
   "opportunities": {
     "items": [
+      {
+        "id": 36,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "Glacis turns an AI startup failure into a sharper founder lesson: if you can\u2019t produce evidence of what the system did, you don\u2019t really control it",
+        "why_now": "GeekWire reported on Apr 7 that Seattle startup Glacis brought on former Microsoft Foundry product leader Rohit Tatachar while launching open-source tooling and a starter plan around what CEO Joe Braidwood calls a \u201cflight recorder for enterprise AI.\u201d The strongest Kenny-fit angle is not generic AI safety positioning. It is the founder lesson underneath it: Braidwood shut down his prior AI mental-health startup after watching model behavior drift in extended conversations, and the next company he built starts from the premise that runtime claims are meaningless if you cannot reconstruct what actually happened. That makes this a cleaner product story than ordinary monitoring chatter or another \u201cobservability\u201d take. It is about moving from trust-by-assertion to inspectable evidence, which overlaps naturally with Kenny\u2019s review/diagnosis worldview without sounding like a Hyperparam paraphrase.",
+        "source": "GeekWire",
+        "format": "",
+        "questions": [
+          "Do you buy the framing that the next trust layer for AI products is not another dashboard but a durable evidence trail teams can actually inspect after something goes wrong?",
+          "Where do you draw the line between useful inspection data and compliance theater when people start talking about tamper-proof records, attestations, and proof?",
+          "Is the sharper public angle here a founder lesson from shutting down Yara, or the broader product lesson that once AI is in production, claims about safety and quality are only as real as the review surface behind them?"
+        ]
+      },
       {
         "id": 35,
         "status": "new",
@@ -469,7 +483,7 @@
         ]
       }
     ],
-    "next_id": 36
+    "next_id": 37
   },
   "calendar": {
     "upcoming": [],
