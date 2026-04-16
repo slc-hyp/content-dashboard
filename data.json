@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-16T18:31:03Z",
+  "generated_at": "2026-04-16T19:05:40Z",
   "opportunities": {
     "items": [
+      {
+        "id": 40,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "DecisionNode\u2019s shared memory layer for Claude Code, Cursor, and Windsurf points to a new AI-dev primitive: context is starting to split away from any single tool",
+        "why_now": "In the last 24 hours, `decisionnode/DecisionNode` hit HN as a Show HN and shipped `v0.6.0`, adding a local UI on top of the same MCP-backed memory store. The repo\u2019s core pitch is unusually crisp: one structured, semantically queryable memory layer shared across Claude Code, Cursor, Windsurf, Antigravity, and other MCP clients. The strongest Kenny-fit angle is not \u201canother agent helper.\u201d It is the broader workflow shift underneath it: once developers use multiple AI tools, per-tool files like `CLAUDE.md` stop being enough, and teams start wanting memory, decisions, and context to live in a portable layer that survives tool switching. That makes this a better Pillar 5 story than another review-surface or generic skills repo item, because it is about a new control primitive for AI-heavy development rather than another interface on top of the same workflow.",
+        "source": "Hacker News Show HN; GitHub `decisionnode/DecisionNode`",
+        "format": "",
+        "questions": [
+          "Do you buy the idea that shared memory becomes its own product layer once developers stop using just one AI tool?",
+          "What should live in a cross-tool memory system versus staying local in something like `CLAUDE.md`, a plan file, or the repo itself?",
+          "If context becomes portable infrastructure, where does the real product differentiation move: the memory layer, the review surface, or the data you feed both?"
+        ]
+      },
       {
         "id": 39,
         "status": "new",
@@ -525,7 +539,7 @@
         ]
       }
     ],
-    "next_id": 40
+    "next_id": 41
   },
   "calendar": {
     "upcoming": [],
