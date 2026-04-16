@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-16T00:30:51Z",
+  "generated_at": "2026-04-16T01:04:20Z",
   "opportunities": {
     "items": [
+      {
+        "id": 39,
+        "status": "new",
+        "pillar": "Pillar 4",
+        "title": "Cal.com moving its core codebase behind closed doors turns AI-era security into a sharper OSS founder question: when does open code stop feeling like a defensible bargain?",
+        "why_now": "Cal.com announced on Apr 15 that it is moving its core production code behind closed doors, with CEO Bailey Pumfleet explicitly arguing that frontier-model vulnerability discovery changes the old open-source security tradeoff. The strongest Kenny-fit angle is not whether Cal.com is right in every detail. It is the broader founder/operator question underneath the move: if AI makes code auditing and exploit discovery dramatically cheaper, some commercial OSS companies may decide that transparency no longer offsets the exposure. That creates a cleaner Pillar 4 story than generic OSS business-model debate because it is about how AI changes the practical boundary between what companies are willing to build in public and what they keep private.",
+        "source": "Cal.com / PR Newswire; The New Stack; Hacker News",
+        "format": "",
+        "questions": [
+          "Do you buy the premise that AI-powered vulnerability discovery materially weakens the old \u201cmore eyeballs make software safer\u201d bargain for commercial open-source companies?",
+          "Where do you think the real line is between responsible hardening and using security as cover for a business-model shift that was already coming?",
+          "If open source gets harder to sustain for infrastructure companies, where does trust move instead: reputation, audits, hosted control, narrower public cores, or something else?"
+        ]
+      },
       {
         "id": 36,
         "status": "new",
@@ -511,7 +525,7 @@
         ]
       }
     ],
-    "next_id": 39
+    "next_id": 40
   },
   "calendar": {
     "upcoming": [],
