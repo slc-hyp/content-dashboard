@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-17T18:31:03Z",
+  "generated_at": "2026-04-17T19:05:30Z",
   "opportunities": {
     "items": [
+      {
+        "id": 41,
+        "status": "new",
+        "pillar": "Pillar 5",
+        "title": "Cloudflare Artifacts reframes agent-era versioning around a deeper infrastructure question: when agents create repos, forks, and state at machine scale, Git hosting built for humans may stop being the right storage primitive",
+        "why_now": "Cloudflare launched Artifacts on Apr 16 and put the core claim unusually plainly: source-control systems were built for humans, not for agents that can create huge numbers of repos, work in parallel, fork aggressively, and persist state continuously. The strongest Kenny-fit angle is not \u201cCloudflare shipped an agent feature.\u201d It is the broader workflow/infrastructure shift underneath it: as agent-heavy development grows, Git may remain the protocol agents know, while the underlying storage and versioning layer starts getting rebuilt for machine-scale workflows rather than human collaboration habits. That makes this a cleaner Pillar 5 story than another wrapper, skill pack, or review-surface repo because it asks whether the persistence layer itself changes once AI starts generating and branching work faster than teams can manage with ordinary repo hosting.",
+        "source": "Cloudflare blog (`Artifacts: versioned storage that speaks Git`); Hacker News",
+        "format": "",
+        "questions": [
+          "Do you buy the premise that agent workflows put pressure on Git hosting, not Git itself?",
+          "If agents create huge volumes of short-lived work, what becomes the right primitive: branches, forks, repos, checkpoints, or something else?",
+          "Does this point to a real new infrastructure layer, or is it mostly cloud-vendor packaging around patterns teams could already hack together?"
+        ]
+      },
       {
         "id": 40,
         "status": "new",
@@ -539,7 +553,7 @@
         ]
       }
     ],
-    "next_id": 41
+    "next_id": 42
   },
   "calendar": {
     "upcoming": [],
