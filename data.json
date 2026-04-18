@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-18T00:30:49Z",
+  "generated_at": "2026-04-18T01:05:04Z",
   "opportunities": {
     "items": [
+      {
+        "id": 42,
+        "status": "new",
+        "pillar": "Pillar 4",
+        "title": "GitHub\u2019s `gh skill` launch turns agent know-how into a first-party package/distribution layer, suggesting open source is starting to ship installable behavior rather than just code",
+        "why_now": "GitHub shipped `gh skill` on Apr 16 with an unusually important combination of primitives in one place: search, install, update, publish, preview, version pinning, and validation for the Agent Skills spec, all inside the core GitHub CLI and explicitly spanning multiple hosts like Copilot, Claude Code, Cursor, Codex, Gemini CLI, and Antigravity. The strongest Kenny-fit angle is not just that skills are getting easier to use. It is that GitHub is legitimizing a new open-source distribution surface where the thing being packaged is agent behavior and workflow knowledge, not only libraries or apps. That makes this a stronger Pillar 4 story than another clever skills repo because it points to a broader GTM and platform shift: installable agent behavior is starting to look like its own package ecosystem, with discovery, portability, versioning, and supply-chain concerns built in from the start.",
+        "source": "GitHub Changelog (`Manage agent skills with GitHub CLI`); GitHub CLI manual (`gh skill`); Agent Skills spec",
+        "format": "",
+        "questions": [
+          "Do you buy the idea that agent behavior is becoming a real packaging/distribution primitive, not just a bunch of prompt files in repos?",
+          "If open source starts shipping installable behavior as well as code, where does the real product moat move: distribution, data, taste, trust, or something else?",
+          "What would make a skill ecosystem feel like a real platform shift instead of a brief wrapper phase around current coding agents?"
+        ]
+      },
       {
         "id": 41,
         "status": "new",
@@ -553,7 +567,7 @@
         ]
       }
     ],
-    "next_id": 42
+    "next_id": 43
   },
   "calendar": {
     "upcoming": [],
