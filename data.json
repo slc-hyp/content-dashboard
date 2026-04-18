@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-18T12:30:41Z",
+  "generated_at": "2026-04-18T13:04:28Z",
   "opportunities": {
     "items": [
+      {
+        "id": 43,
+        "status": "new",
+        "pillar": "Pillar 6",
+        "title": "Certiv\u2019s endpoint-first agent security pitch sharpens a founder/product question: if AI agents act with employee credentials on local machines, the real control surface may move onto the endpoint itself",
+        "why_now": "Seattle startup Certiv launched publicly with $4.2M and a very specific systems claim: cloud and network controls are not enough once AI agents are running on employee laptops, reading files, using local credentials, and making decisions before requests even hit central infrastructure. The strongest Kenny-fit angle is not generic \u201cAI agent security.\u201d It is the deeper product/founder question underneath it: when agent behavior becomes local and credentialed, the control surface may have to live where the work actually happens, not just in dashboards or gateway logs. That makes this a stronger Pillar 6 story than another vertical-agent or funding note because it ties architecture to company formation in a concrete way \u2014 a new startup exists because the older control boundary may be wrong for agent-era software.",
+        "source": "GeekWire (`Seattle startup Certiv launches with $4.2M to build endpoint security layer for AI agents`)",
+        "format": "",
+        "questions": [
+          "Do you buy the premise that agent-era control has to move onto the endpoint, or does that just reflect where current tools are weak?",
+          "If the most important agent actions happen under a user\u2019s credentials on their own machine, what becomes the right inspection surface: endpoint runtime, cloud trace, or both?",
+          "Is the sharper founder lesson here about security specifically, or about the broader fact that AI is redrawing where software boundaries have to live?"
+        ]
+      },
       {
         "id": 42,
         "status": "new",
@@ -567,7 +581,7 @@
         ]
       }
     ],
-    "next_id": 43
+    "next_id": 44
   },
   "calendar": {
     "upcoming": [],
