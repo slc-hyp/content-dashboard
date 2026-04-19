@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-04-19T06:30:32Z",
+  "generated_at": "2026-04-19T07:04:15Z",
   "opportunities": {
     "items": [
+      {
+        "id": 44,
+        "status": "new",
+        "pillar": "Pillar 7",
+        "title": "Rec Room\u2019s shutdown and Snap asset sale turn a VR nostalgia story into a sharper founder question: if even a category-defining social VR platform with 150M players and a $3.5B valuation couldn\u2019t make the business work, where does durable value in VR actually live?",
+        "why_now": "Rec Room is shutting down on June 1, and Snap has already acquired select assets and team members for its Specs/XR push. The stronger Kenny-fit angle is not \u201cVR company died\u201d or generic nostalgia. It is the harder founder/product lesson underneath it: a platform that clearly mattered to users \u2014 enough that players are posting that \u201cnothing will ever replace Rec Room,\u201d that they learned to build and socialize there, and that it was one of the few games that really \u201cgot\u201d VR \u2014 still could not find a sustainable business model. That makes this a better Pillar 7 item than another headset or game release because it gives Kenny a differentiated take at the intersection of personal VR interest and founder reality: in immersive products, emotional importance and even large-scale adoption do not automatically translate into durable economics.",
+        "source": "GeekWire (`Rec Room shutting down: Once valued at $3.5B, social gaming platform finds profits elusive`; `Snap acquires assets from Rec Room as social gaming platform announces shutdown`; `\u2018I don\u2019t think anything will ever replace Rec Room\u2019: Fans shocked by gaming platform shutdown`)",
+        "format": "",
+        "questions": [
+          "What do you think Rec Room got truly right about VR/social presence that most VR products still miss?",
+          "If a product can matter this much to users and still fail economically, where do you think the real durable value in VR lives: hardware, creator tools, enterprise use, platform tolls, or something else?",
+          "Is the sharper lesson here about VR specifically, or about the broader founder trap of confusing cultural importance with a viable business?"
+        ]
+      },
       {
         "id": 43,
         "status": "new",
@@ -581,7 +595,7 @@
         ]
       }
     ],
-    "next_id": 44
+    "next_id": 45
   },
   "calendar": {
     "upcoming": [],
